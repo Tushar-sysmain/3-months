@@ -130,33 +130,7 @@
 
 
 
-		 /* Music Button Styles */
-    #music-btn {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background: white;
-      border: none;
-      border-radius: 50%;
-      padding: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s ease, background 0.3s ease;
-    }
 
-    #music-btn:hover {
-      transform: scale(1.1);
-      background: #e6e6e6;
-    }
-
-    #music-btn svg {
-      width: 28px;
-      height: 28px;
-      fill: #333;
-    }
 	</style>
 	<script>
 		// Scroll animation using Intersection Observer with staggered slide-in effect
@@ -384,62 +358,12 @@
 			w.print();
 		});
 
-		//music 
-
-		    const music = document.getElementById("bgMusic");
-    const playBtn = document.getElementById("playBtn");
-
-    // Try to autoplay when the page loads
-    window.addEventListener("load", () => {
-      music.play().catch(() => {
-        // If autoplay is blocked, show the play button
-        playBtn.style.display = "block";
-      });
-    });
-
-    // Play when the user clicks the button
-    playBtn.addEventListener("click", () => {
-      music.play();
-      playBtn.style.display = "none";
-    });
-
-
-
-
-
-
-
-		const music = document.getElementById("bg-music");
-    const musicBtn = document.getElementById("music-btn");
-
-    // Try to autoplay music on load
-    window.addEventListener("load", async () => {
-      try {
-        await music.play();
-      } catch (err) {
-        console.log("Autoplay blocked by browser, waiting for user interaction...");
-      }
-    });
-
-    // Toggle music on click
-    musicBtn.addEventListener("click", () => {
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    });
-
-
-		function playMusic() {
-      const audio = document.getElementById("myAudio");
-      audio.play();
-    }
 
 	</script>
 </body>
 
 </html>
+
 
 
 
