@@ -307,6 +307,11 @@
   </button>
 
 
+
+
+	<button onclick="playMusic()">Play Music</button>
+
+
 	<script>
 		// ============== CUSTOMIZE HERE ==============
 		const START_DATE = new Date('06-07-2025');   // Set your real start date (YYYY-MM-DD)
@@ -425,10 +430,17 @@
       }
     });
 
+
+		function playMusic() {
+      const audio = document.getElementById("myAudio");
+      audio.play();
+    }
+
 	</script>
 </body>
 
 </html>
+
 
 
 
